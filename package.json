@@ -1,0 +1,13 @@
+{
+  "name": "node-react",
+  "version": "1.0.0",
+  "scripts": {
+    "client": "cd client && npm start",
+    "server": "cd api && npm start",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "postinstall": "cd api && npm install && cd ../client && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0"
+  }
+}
